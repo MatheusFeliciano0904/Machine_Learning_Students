@@ -128,9 +128,4 @@ Aprendizado_Nao_Supervisionado_Students/
 ## 👨‍💻 Autor
 
 **Matheus Victor Feliciano Jupi**
-
-
-## 📄 Licença
-
-Projeto desenvolvido para fins acadêmicos e educacionais.
-
+**Gabriella Santos Mendes**
