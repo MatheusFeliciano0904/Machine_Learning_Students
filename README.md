@@ -35,7 +35,7 @@ matplotlib
 seaborn
 plotly
 scikit-learn
-
+```
 ## 📂 Dataset
 
 O dataset contém informações demográficas, acadêmicas e comportamentais dos estudantes, incluindo:
@@ -47,7 +47,6 @@ O dataset contém informações demográficas, acadêmicas e comportamentais dos
 * participação em esportes;
 * atividades extracurriculares.
 
----
 
 ## 🔄 Pipeline do Projeto
 
@@ -59,7 +58,6 @@ O dataset contém informações demográficas, acadêmicas e comportamentais dos
 6. Visualização com PCA;
 7. Avaliação dos clusters.
 
----
 
 ## 📉 Resultados
 
@@ -67,7 +65,6 @@ Os clusters apresentaram diferenças comportamentais e acadêmicas entre os estu
 
 O projeto demonstrou que datasets educacionais frequentemente possuem padrões parcialmente misturados, algo confirmado pelo **Silhouette Score** obtido.
 
----
 
 ## 🚀 Como Executar
 
@@ -75,7 +72,7 @@ O projeto demonstrou que datasets educacionais frequentemente possuem padrões p
 
 ```bash
 git clone https://github.com/seu-usuario/seu-repositorio.git
-```
+
 
 ### Instalar dependências
 
