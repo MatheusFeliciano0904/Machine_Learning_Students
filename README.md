@@ -127,6 +127,6 @@ Aprendizado_Nao_Supervisionado_Students/
 
 ## 👨‍💻 Autor
 
-** Matheus Victor Feliciano Jupi** 
+* Matheus Victor Feliciano Jupi
 
-** Gabriella Santos Mendes** 
+* Gabriella Santos Mendes
