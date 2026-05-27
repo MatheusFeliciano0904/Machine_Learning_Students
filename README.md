@@ -38,15 +38,31 @@ scikit-learn
 ```
 ## 📂 Dataset
 
-O dataset contém informações demográficas, acadêmicas e comportamentais dos estudantes, incluindo:
+O dataset contém informações acadêmicas, demográficas e comportamentais dos estudantes.
 
-* GPA;
-* faltas;
-* tempo de estudo;
-* apoio parental;
-* participação em esportes;
-* atividades extracurriculares.
+### Principais Variáveis
 
+| Variável        | Descrição                                    |
+| --------------- | -------------------------------------------- |
+| Age             | Idade do estudante                           |
+| Gender          | Gênero                                       |
+| Ethnicity       | Etnia                                        |
+| StudyTimeWeekly | Horas de estudo semanais                     |
+| Absences        | Número de faltas                             |
+| GPA             | Média geral do estudante                     |
+| ParentalSupport | Nível de apoio familiar                      |
+| Extracurricular | Participação em atividades extracurriculares |
+| Sports          | Participação em esportes                     |
+| Music           | Participação em música                       |
+| Volunteering    | Participação em voluntariado                 |
+
+### 🔗 Fonte do Dataset
+
+Dataset obtido no Kaggle:
+
+* [Students Performance Dataset - Kaggle](https://www.kaggle.com/datasets/rabieelkharoua/students-performance-dataset/data?utm_source=chatgpt.com)
+
+Autor do dataset: Rabie El Kharoua.
 
 ## 🔄 Pipeline do Projeto
 
