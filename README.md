@@ -1,132 +1,312 @@
-# 📊 Análise de Performance de Estudantes com K-Means
+# 🎓 Machine Learning Students
 
-Projeto de Machine Learning Não Supervisionado focado na identificação de padrões acadêmicos e comportamentais entre estudantes utilizando **K-Means Clustering**, **PCA** e técnicas de análise exploratória de dados.
+Projeto desenvolvido com o objetivo de explorar diferentes abordagens de Machine Learning utilizando o mesmo conjunto de dados de desempenho acadêmico de estudantes.
 
+O estudo foi dividido em duas etapas complementares:
 
-## 📌 Objetivo
+1. **Aprendizado Não Supervisionado** utilizando K-Means para identificação de padrões e agrupamentos de estudantes.
+2. **Aprendizado Supervisionado** utilizando Redes Neurais Artificiais para classificação do desempenho acadêmico dos estudantes.
 
-O projeto busca identificar grupos de estudantes com características semelhantes relacionadas a:
-
-- desempenho acadêmico;
-- hábitos de estudo;
-- frequência escolar;
-- apoio familiar;
-- atividades extracurriculares.
-
-## 🧠 Técnicas Utilizadas
-
-- K-Means Clustering
-- PCA (Principal Component Analysis)
-- One-Hot Encoding
-- Padronização de Dados
-- Análise Exploratória de Dados (EDA)
-- Silhouette Score
-
-## ⚙️ Tecnologias
-
-### Linguagem
-- Python
-
-### Bibliotecas
-```python
-pandas
-numpy
-matplotlib
-seaborn
-plotly
-scikit-learn
-```
-## 📂 Dataset
-
-O dataset contém informações acadêmicas, demográficas e comportamentais dos estudantes.
-
-### Principais Variáveis
-
-| Variável        | Descrição                                    |
-| --------------- | -------------------------------------------- |
-| Age             | Idade do estudante                           |
-| Gender          | Gênero                                       |
-| Ethnicity       | Etnia                                        |
-| StudyTimeWeekly | Horas de estudo semanais                     |
-| Absences        | Número de faltas                             |
-| GPA             | Média geral do estudante                     |
-| ParentalSupport | Nível de apoio familiar                      |
-| Extracurricular | Participação em atividades extracurriculares |
-| Sports          | Participação em esportes                     |
-| Music           | Participação em música                       |
-| Volunteering    | Participação em voluntariado                 |
-
-### 🔗 Fonte do Dataset
-
-Dataset obtido no Kaggle:
-
-* [Students Performance Dataset - Kaggle](https://www.kaggle.com/datasets/rabieelkharoua/students-performance-dataset/data?utm_source=chatgpt.com)
-
-Autor do dataset: Rabie El Kharoua.
-
-## 🔄 Pipeline do Projeto
-
-1. Pré-processamento dos dados;
-2. Análise exploratória;
-3. Engenharia de features;
-4. Padronização dos dados;
-5. Clusterização com K-Means;
-6. Visualização com PCA;
-7. Avaliação dos clusters.
+A proposta do projeto foi compreender, na prática, as diferenças entre técnicas supervisionadas e não supervisionadas, aplicando ambas sobre o mesmo dataset e comparando seus objetivos, resultados e aplicações.
 
 
-## 📉 Resultados
+# 📂 Estrutura do Projeto
 
-Os clusters apresentaram diferenças comportamentais e acadêmicas entre os estudantes, porém com certa sobreposição entre os grupos.
-
-O projeto demonstrou que datasets educacionais frequentemente possuem padrões parcialmente misturados, algo confirmado pelo **Silhouette Score** obtido.
-
-
-## 🚀 Como Executar
-
-### Clonar o repositório
-
-```bash
-git clone https://github.com/seu-usuario/seu-repositorio.git
-
-
-### Instalar dependências
-
-```bash
-pip install -r requirements.txt
-```
-
-### Executar o notebook
-
-```bash
-jupyter notebook
-```
-
-Abrir:
-
-```bash
-K_means_Students.ipynb
-```
-
-## 📁 Estrutura do Projeto
-
-```bash
-Aprendizado_Nao_Supervisionado_Students/
+```text
+Machine_Learning_Students/
 │
 ├── data/
-│   └── students/
-│       └── K_means_Students.ipynb
-│
-├── notbooks/
-│   ├── Metadados do Dataset.docx
 │   └── Student_performance_data_.csv
 │
+├── docs/
+│   ├── Metadados do Dataset.docx
+│   └── machine_learning_resumo.pdf
+│
+├── Aprendizado não Supervisionado/
+│   └── notebooks/
+│       └── K_means_Students.ipynb
+│
+├── Aprendizado Supervisionado- RNA/
+│   └── notebooks/
+│       └── Student Performance Classification Using Neural Networks.ipynb
+│
+├── README.md
 └── .gitattributes
 ```
 
 
-## 👨‍💻 Autor
+# 📊 Dataset
 
-* Matheus Victor Feliciano Jupi
+O projeto utiliza o dataset **Student Performance Dataset**, contendo informações acadêmicas, demográficas e comportamentais de estudantes. Os dados incluem idade, gênero, etnia, tempo semanal de estudo, faltas, apoio familiar, participação em atividades extracurriculares e desempenho acadêmico.
 
-* Gabriella Santos Mendes
+## Variáveis Principais
+
+### Demográficas
+
+- Age
+- Gender
+- Ethnicity
+- ParentalEducation
+
+### Hábitos de Estudo
+
+- StudyTimeWeekly
+- Absences
+- Tutoring
+
+### Apoio Familiar
+
+- ParentalSupport
+
+### Atividades Extracurriculares
+
+- Extracurricular
+- Sports
+- Music
+- Volunteering
+
+### Desempenho Acadêmico
+
+- GPA
+- GradeClass
+
+
+# 🎯 Objetivos do Projeto
+
+Este projeto busca responder duas perguntas distintas:
+
+## Aprendizado Não Supervisionado
+
+> Existem grupos naturais de estudantes com características semelhantes?
+
+## Aprendizado Supervisionado
+
+> É possível prever a classificação acadêmica de um estudante utilizando suas características pessoais e acadêmicas?
+
+
+# 🔍 Etapa 1 — Aprendizado Não Supervisionado (K-Means)
+
+## Objetivo
+
+Identificar padrões ocultos nos dados sem utilizar uma variável alvo.
+
+Nesta etapa, o algoritmo K-Means foi utilizado para segmentar os estudantes em grupos com características semelhantes.
+
+
+## Etapas Realizadas
+
+### 1. Análise Exploratória dos Dados (EDA)
+
+- Estatísticas descritivas
+- Distribuição das variáveis
+- Identificação de padrões iniciais
+
+### 2. Correlação entre Variáveis
+
+- Construção da matriz de correlação
+- Identificação de relações entre hábitos de estudo e desempenho
+
+### 3. Padronização dos Dados
+
+Utilização do StandardScaler para normalização das variáveis.
+
+### 4. Clusterização com K-Means
+
+- Determinação do número ideal de clusters
+- Aplicação do algoritmo K-Means
+
+### 5. Redução de Dimensionalidade
+
+Utilização de PCA (Principal Component Analysis) para visualização dos agrupamentos.
+
+
+## Resultados Obtidos
+
+O algoritmo foi capaz de identificar grupos de estudantes com perfis acadêmicos e comportamentais distintos, permitindo observar padrões relacionados a:
+
+- Tempo de estudo
+- Faltas
+- Participação em atividades extracurriculares
+- Apoio familiar
+
+Importante destacar que, por se tratar de Aprendizado Não Supervisionado, não havia uma variável alvo a ser prevista.
+
+
+# 🧠 Etapa 2 — Aprendizado Supervisionado (Redes Neurais Artificiais)
+
+## Objetivo
+
+Prever a variável **GradeClass**, que representa o desempenho acadêmico final do estudante.
+
+### Classes
+
+| Classe | Significado |
+|----------|----------|
+| 0 | A |
+| 1 | B |
+| 2 | C |
+| 3 | D |
+| 4 | F |
+
+Valores maiores representam pior desempenho acadêmico. :contentReference[oaicite:1]{index=1}
+
+
+## Preparação dos Dados
+
+### Escolha da Variável Alvo
+
+Foi escolhida a variável:
+
+```python
+GradeClass
+```
+
+por representar diretamente o desempenho acadêmico dos estudantes.
+
+
+### Remoção do GPA
+
+A variável GPA foi removida para evitar **Data Leakage**, pois a GradeClass é derivada diretamente do GPA.
+
+
+### One-Hot Encoding
+
+Transformação das variáveis categóricas em formato numérico:
+
+- Gender
+- Ethnicity
+- ParentalEducation
+- ParentalSupport
+
+
+### Padronização
+
+Aplicação do StandardScaler para normalização das variáveis.
+
+### Divisão dos Dados
+
+```text
+Treino: 80%
+Teste: 20%
+```
+
+
+# 🏗️ Arquitetura da Rede Neural
+
+A rede neural foi construída utilizando TensorFlow/Keras.
+
+### Estrutura
+
+```text
+Entradas (25 Features)
+          ↓
+Camada Oculta (32 neurônios)
+          ↓
+Camada Oculta (16 neurônios)
+          ↓
+Saída (5 classes)
+```
+
+### Funções Utilizadas
+
+- ReLU (camadas ocultas)
+- Softmax (camada de saída)
+
+### Otimizador
+
+```python
+Adam
+```
+
+### Função de Perda
+
+```python
+Sparse Categorical Crossentropy
+```
+
+# 📈 Resultados Obtidos
+
+## Avaliação Final
+
+```text
+Accuracy: 68,48%
+Loss: 0,82
+```
+
+A Rede Neural conseguiu classificar corretamente aproximadamente 68% dos estudantes do conjunto de teste.
+
+
+## Matriz de Confusão
+
+A análise da matriz de confusão mostrou que:
+
+✅ Excelente desempenho para identificar estudantes da classe F.
+
+✅ A maior parte dos erros ocorreu entre classes adjacentes:
+
+```text
+B ↔ C
+C ↔ D
+D ↔ F
+```
+
+✅ Poucas confusões entre classes extremas:
+
+```text
+A ↔ F
+```
+
+---
+
+## Classification Report
+
+| Classe | Precision | Recall | F1-Score |
+|----------|----------|----------|----------|
+| A | 0.29 | 0.19 | 0.23 |
+| B | 0.51 | 0.48 | 0.50 |
+| C | 0.43 | 0.47 | 0.45 |
+| D | 0.49 | 0.49 | 0.49 |
+| F | 0.90 | 0.91 | 0.90 |
+
+### Conclusões
+
+- A classe F apresentou excelente desempenho.
+- As classes intermediárias apresentaram desempenho moderado.
+- A classe A foi a mais difícil de identificar.
+- O dataset apresenta desbalanceamento de classes, favorecendo a classe F.
+
+
+# 🛠️ Tecnologias Utilizadas
+
+- Python
+- Pandas
+- NumPy
+- Matplotlib
+- Seaborn
+- Scikit-Learn
+- TensorFlow
+- Keras
+
+
+# 📚 Principais Conceitos Aplicados
+
+## Aprendizado Não Supervisionado
+
+- K-Means
+- Clusterização
+- PCA
+- Segmentação de Dados
+
+## Aprendizado Supervisionado
+
+- Redes Neurais Artificiais
+- Classificação Multiclasse
+- One-Hot Encoding
+- StandardScaler
+- Matriz de Confusão
+- Classification Report
+
+
+# 👨‍💻 Autor
+
+**Matheus Victor Feliciano Jupi**
